@@ -1,0 +1,6 @@
+FROM python:3
+ENV CELERY_BROKER_URL=amqp://admin:mypass@rabbit:5672
+COPY ./flower_req.txt /custom_module/requirements.txt
+RUN pip3 install -r ./custom_module/requirements.txt
+COPY ./* /custom_module
+ENTRYPOINT celery -A custom_module flower --loglevel=info

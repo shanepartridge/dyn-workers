@@ -1,0 +1,1 @@
+[901ed678d6b1]- 2023-04-21 16:51:24,368 - custom_module - [INFO] - log from custom modules

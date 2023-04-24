@@ -1,0 +1,3 @@
+[9094c7f6854c]- 2023-04-21 17:37:26,969 - custom_module - [INFO] - log from custom modules
+[9094c7f6854c]- 2023-04-21 17:37:56,975 - custom_module - [INFO] - log from custom modules
+[9094c7f6854c]- 2023-04-21 17:38:26,983 - custom_module - [INFO] - log from custom modules

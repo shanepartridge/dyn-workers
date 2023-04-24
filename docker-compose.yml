@@ -1,0 +1,28 @@
+version: "3"
+services:
+  rabbit:
+    container_name: rabbit
+    hostname: rabbit
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+
+  # worker:
+  #   environment:
+  #     - DOCKER=True
+  #   build:
+  #     context: ./worker/
+  #     dockerfile: ./Dockerfile
+  #   volumes:
+  #     - ./logs:/logs
+
+  flower:
+    build:
+      context: ./worker
+      dockerfile: dockerfile.flower
+    ports:
+      - "5555:5555"
